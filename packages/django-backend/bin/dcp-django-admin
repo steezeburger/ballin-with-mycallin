@@ -1,0 +1,5 @@
+#! /bin/bash
+
+# proxy to execute `manage.py` (django-admin) commands in web container
+
+docker-compose run --rm -w /code/app django-backend /code/app/manage.py "$@"
